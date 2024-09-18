@@ -4,7 +4,7 @@ function getComputerChoice() {
   return Math.floor(Math.random() * 3);
 }
 
-//array, giver sten, saks og papir et tal 
+//array, giver sten, saks og papir et tal hver fra 0-2
 const choices = ['rock', 'paper', 'scissors'];
 
 const winCombinations = {
@@ -12,6 +12,12 @@ const winCombinations = {
     paper: 'rock',
     scissors: 'paper'
 };
+
+document.querySelector('.rock').addEventListener('click', () => startGame(0));
+document.querySelector('.paper').addEventListener('click', () => startGame(1));
+document.querySelector('.scissors').addEventListener('click', () => startGame(2));
+
+
 
 // sammenligner spillerens valg og bestemmer udfaldet 
 function startGame(playerChoice) {
@@ -38,7 +44,6 @@ player2.className = `player ${choices[computerChoice]}`;
 if (playerChoice === computerChoice) {
     drawText.classList.remove('hidden'); 
 }
-
 else if 
 (winCombinations[choices[playerChoice]] === choices[computerChoice]) {
     winText.classList.remove('hidden');}
@@ -46,10 +51,6 @@ else {
     loseText.classList.remove('hidden');
 }
 }
-
-document.querySelector('.rock').addEventListener('click', () => startGame(0));
-document.querySelector('.paper').addEventListener('click', () => startGame(1));
-document.querySelector('.scissors').addEventListener('click', () => startGame(2));
 
 
 
