@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Tænk på et tal mellem 1 og 100</h1>
+    <p id="computer-guess"></p>
+    <div>
+      <button class="too-low">Too low</button>
+      <button class="too-high">Too high</button>
+      <button class="correct">Oh no, correct answer</button>
+      <button class="start-game">Start game</button>
+    </div>
+    <iframe
+      id="winGif"
+      src="https://giphy.com/embed/9o9dh1JRGThC1qxGTJ"
+      width="480"
+      height="360"
+      frameborder="0"
+      class="giphy-embed"
+      allowfullscreen
+    ></iframe>
+    <script src="index.js"></script>
+  </body>
+</html>
+
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+  }
+  #winGif {
+    opacity: 0;
+    width: 100px;
+    height: auto;
+    transition: opacity 0.5s ease;
+  }
+
+  button {
+    color: white;
+    background-color: black;
+    padding: 5px;
+    border-radius: 30px;
+    border: none;
+  }
+
+  @keyframes grow {
+    from {
+      transform: scale(1);
+      opacity: 0;
+    }
+    to {
+      transform: scale(5.5);
+      opacity: 1;
+    }
+  }
+
+  .grow {
+    margin-top: 150px;
+    animation: grow 2s forwards;
+  }
+</style>
