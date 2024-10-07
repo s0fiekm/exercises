@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body[data-theme="light"] {
+      --header-bg-col: #f0f8ff;
+      --header-text-col: #333333;
+      --footer-bg-col: #e6e6e6;
+      --h1-color: #000000;
+      --h2-color: #333333;
+      --p-color: #555555;
+    }
+
+    body[data-theme="dark"] {
+      --header-bg-col: #333333;
+      --header-text-col: #ffffff;
+      --footer-bg-col: #555555;
+      --h1-color: #ffffff;
+      --h2-color: #cccccc;
+      --p-color: #bbbbbb;
+    }
+
+    body[data-theme="pastel"] {
+      --header-bg-col: #ffb6c1;
+      --header-text-col: #4b0082;
+      --footer-bg-col: #ffe4e1;
+      --h1-color: #4b0082;
+      --h2-color: #8a2be2;
+      --p-color: #dda0dd;
+    }
+
+    footer {
+      background-color: var(--footer-bg-col);
+      padding: 5%;
+    }
+
+    main {
+      padding: 7%;
+    }
+
+    header {
+      gap: 5rem;
+      align-items: center;
+      padding: 10%;
+      display: flex;
+      flex-direction: row;
+      background-color: var(--header-bg-col);
+      color: var(--header-text-col);
+    }
+
+    h1 {
+      font-size: 5rem;
+      color: var(--h1-color);
+    }
+
+    h2 {
+      color: var(--h2-color);
+    }
+
+    p {
+      color: var(--p-color);
+    }
+  </style>
+  <body data-theme="light">
+    <header>
+      <h1>Theme switcher</h1>
+      <h2>Choose theme</h2>
+      <select id="themeSelector">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+        <option value="pastel">Pastel</option>
+      </select>
+    </header>
+    <main>Content</main>
+    <footer>
+      <h2>Footer</h2>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
